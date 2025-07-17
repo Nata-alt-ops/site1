@@ -1,0 +1,251 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.countainer_1 {
+    display: grid; 
+    background-color: #141024;
+    color: #ffffff;
+    width: 1920px ;
+    height: 1080px;
+    opacity: 1;
+    position: relative; 
+    overflow: hidden; 
+    margin: 0; 
+    padding: 0px; 
+    border: none; 
+    outline: none;
+    }
+.Layout_big_text_left{
+    width: 228px;
+    height: 48px;
+    top: 30px;
+    left: 100px;
+    opacity: 1;
+    position: absolute;
+
+}
+
+.big_text_left{
+    font-family: "Jost";
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 160%;
+    letter-spacing: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: 'Jost';
+    src: url('./fonts/Jost-Regular.ttf') format('truetype');
+}
+
+
+
+.nav-buttons-container {
+    position: absolute;
+    top: 38px;
+    left: 798px;
+    display: flex;
+    gap: 40px;
+    width: 324px;
+    height: 32px;
+    overflow: hidden;
+}
+
+.nav-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 4px 0;
+    position: relative;
+    transition: all 0.4s ease;
+    width: 324px; 
+    height: 32px; 
+}
+.nav-button1,.nav-button2,.nav-button3  {
+    font-family: 'Jost';
+    
+}
+
+.nav-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.4s ease;
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: white;
+    transition: width 0.4s ease;
+}
+
+.nav-button:hover {
+    color: #ffffff;
+}
+
+.nav-button:hover::before {
+    width: 100%;
+}
+
+.nav-button:hover::after {
+    width: 100%;
+}
+
+.Layout_big_text_right {
+    width: 228px;
+    height: 48px;
+    top: 30px;
+    left: 100px;
+    opacity: 1;
+    position: absolute;
+
+}
+
+.big_text_right {
+    position: relative;
+    display: inline-block;
+    padding: 4px 0;
+    cursor: pointer; 
+    transition: all 0.4s ease;
+    font-size: 26px;
+    font-family: "Jost";
+    left:1465px;
+    margin-top: 0px;
+}
+
+
+.big_text_right::before,
+.big_text_right::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    background-color: white;
+    transition: width 0.4s ease;
+    width: 0;
+}
+
+.big_text_right::before {
+    top: 0;
+    left: 0;
+}
+
+.big_text_right::after {
+    bottom: 0;
+    right: 0;
+}
+
+.big_text_right:hover {
+    color: #ffffff;
+}
+
+.big_text_right:hover::before,
+.big_text_right:hover::after {
+    width: 100%;
+}
+
+.circle {
+  background: #ffffff;
+  width: 783px;
+  height: 783px;
+  border-radius: 406px;
+  position: absolute;
+  left: 924px;
+  top: 263px;
+  border: 79px solid white; /* Толщина и цвет обводки */
+  background: transparent; /* Прозрачный фон */
+  box-sizing: border-box; /* Чтобы border не увеличивал размеры */
+}
+
+.img_head {
+  width: 515.52px;
+  height: 917.48px;
+  position: absolute;
+  left: 1056.99px;
+  top: 162.52px
+}
+.big_text_center {
+    font-family: "Jost";
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    letter-spacing: 0;
+    margin: 0;
+}
+.Layout_big_text_center{
+    width: 516px;
+    height: 112px;
+    top: 344px;
+    left: 380px;
+    opacity: 1;
+    position: absolute;
+
+}
+.Layout_small_text_center{
+    width: 478px;
+    height: 64px;
+    top: 476px;
+    left: 380px;
+    opacity: 1;
+    position: absolute;
+
+}
+.small_text_center{
+    font-family: "Jost";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 160%;
+    letter-spacing: 0;
+    margin: 0;
+
+}
+.countainer_button_head {
+    background-color:#D52027;
+    width: 260px;
+    height: 79px;
+    top: 590px;
+    left:380px;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid transparent; /* Прозрачная граница для плавного перехода */
+    transition: all 0.3s ease; /* Плавная анимация всех свойств */
+}
+.button_head{
+    color: #ffffff;
+    width: 152px;
+    height: 29px;
+    font: 'Jost';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0; 
+    margin: 0;
+    width: auto; 
+    transition: color 0.3s ease; /* Плавное изменение цвета текста */
+   
+}
+.countainer_button_head:hover {
+    background-color: white; /* Белый фон */
+    border: 2px solid #D52027; /* Красная обводка */
+}
+.countainer_button_head:hover .button_head {
+    color: #D52027; /* Красный текст */
+}
