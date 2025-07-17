@@ -56,7 +56,7 @@ body {
     background: none;
     border: none;
     color: white;
-    font-size: 18px;
+    font-size: 19px;
     cursor: pointer;
     padding: 4px 0;
     position: relative;
@@ -248,4 +248,54 @@ body {
 }
 .countainer_button_head:hover .button_head {
     color: #D52027; /* Красный текст */
+}
+.countainer_2 {
+    background-color: #ffffff;
+    width: 1920px;
+    height: 595px;
+    position: relative;
+    padding: 100px 380px;
+    overflow: hidden; 
+    margin: 0; 
+    padding: 0px; 
+    border: none; 
+    outline: none;
+    }
+.text_body {
+    width: 891px;
+    margin-bottom: 60px; /* Отступ от следующего блока */
+}
+
+.text_body1 {
+    font-family: "Jost";
+    font-weight: 600;
+    font-size: 70px;
+    line-height: 160%;
+    letter-spacing: 0;
+    margin: 0;
+}
+
+.stats-container {
+    display: flex;
+    gap: 30px; /* Расстояние между блоками */
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    width: 200px; /* Фиксированная ширина блока */
+}
+
+.stat-number {
+    font-family: "Jost";
+    font-weight: 700;
+    font-size: 50px;
+    color: #D52027;
+    margin-bottom: 10px;
+}
+
+.stat-description {
+    font-family: "Jost";
+    font-weight: 400;
+    font-size: 18px;
+    color: #000000;
 }
