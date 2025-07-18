@@ -2,6 +2,7 @@ body {
     margin: 0;
     padding: 0;
 }
+/*Шапка*/
 .countainer_1 {
     display: grid; 
     background-color: #141024;
@@ -36,7 +37,7 @@ body {
 }
 @font-face {
     font-family: 'Jost';
-    src: url('./fonts/Jost-Regular.ttf') format('truetype');
+    src: url('./Jost-master/fonts/Jost-VF.ttf') format('truetype');
 }
 
 
@@ -249,12 +250,16 @@ body {
 .countainer_button_head:hover .button_head {
     color: #D52027; /* Красный текст */
 }
+
+/*Основная часть*/
 .countainer_2 {
     background-color: #ffffff;
-    width: 100%;
-    max-width: 1920px;
+    width: 1920px;
     padding: 100px 380px;
     box-sizing: border-box;
+    height: 614px; 
+    min-height: 614px;    /* Минимальная высота */
+    margin: 0 auto;
 }
 
 .about-section {
@@ -276,7 +281,9 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    
 }
+
 
 .stat-item {
     display: flex;
@@ -285,10 +292,11 @@ body {
 
 .stat-number {
     font-family: 'Jost', sans-serif;
-    font-size: 50px;
-    font-weight: 700;
+    font-size: 70px;
+    font-weight: 610;
     color: #D52027;
     margin-bottom: 15px;
+    
 }
 
 .stat-label {
@@ -296,5 +304,264 @@ body {
     font-size: 18px;
     font-weight: 400;
     line-height: 1.6;
-    color: #141024;
+    color: #747272;
 }
+
+
+.countainer_3{
+    width: 1920px;
+    height: 526px;
+    top:0px;
+    left: -1px;
+    background-color: #F9F9F9;
+    position: relative; 
+    padding: 181px 378px;}
+
+.what_will_you_get{
+    width: 723px;
+    height: 80px;
+    top:100px;
+    left: 380px;
+    margin-bottom: 60px;
+    position: absolute;
+
+
+}
+.what_will_you_get_head_text{
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 160%;
+    letter-spacing: 0;
+    position: static;
+    width: 742px;
+    height: 38px;
+    opacity: 1;
+    top: 1934px;
+    left: 380px;
+
+    
+
+}
+
+.about_pluses_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 70px;
+    align-items: stretch;
+    
+}
+
+.about_pluses_item {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-width: 300px; /* Ограничиваем максимальную ширину колонки */
+    margin: 0px;
+}
+
+.about_pluses_text {
+    font-family: 'Jost', sans-serif;
+    font-size: 24px;
+    font-weight: 610;
+    color: #000000;
+    margin-bottom: 15px;
+    
+}
+
+.about_pluses_label {
+    font-family: 'Jost', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #747272;
+    min-height: 120px;
+}
+/* Стили для текста с иконкой */
+.about_pluses_text {
+    position: relative; /* Для позиционирования подсказки */
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Стили для кнопки-иконки */
+.tooltip_btn {
+    background: none;
+    border: none;
+    color: #000000;
+    font-size: 16px;
+    cursor: help;
+    padding: 0;
+    margin-left: 5px;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+/* Стили для всплывающей подсказки */
+.tooltip_text {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 100%;
+    transform: translateX(-50%);
+    background: #fff;
+    color: #141024;
+    padding: 8px 12px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    font-size: 14px;
+    z-index: 10;
+    width: max-content;
+    max-width: 200px;
+    margin-bottom: 8px;
+}
+
+.tooltip_btn:hover + .tooltip_text,
+.tooltip_btn:focus + .tooltip_text {
+    display: block;
+}
+
+/*.countainer_4{
+    width: 1920px;
+    height: auto;
+    top:0px;
+    left: -1px;
+    background-color: #ffffff;
+    position: relative; 
+    padding: 212px 378px;}
+
+.professional_trainers{
+    width: 723px;
+    height: 80px;
+    top:100px;
+    left: 380px;
+    margin-bottom: 60px;
+    position: absolute;
+
+
+}
+.professional_trainers_text{
+    font-family: 'Jost';
+    font-weight: 400;
+    font-size: 50px;
+    line-height: 160%;
+    letter-spacing: 0;
+    position: static;
+    width: 742px;
+    height: 38px;
+    opacity: 1;
+    top: 1934px;
+    left: 380px;
+
+    
+
+}*/
+
+/* Стили для секции тренеров 
+.countainer_4 {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.professional_trainers_text {
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 40px;
+  color: #141024;
+}
+
+/* Карусель 
+.trainers-carousel {
+  position: relative;
+  overflow: hidden;
+}
+
+.trainers-track {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease;
+}
+
+.trainer-card {
+  min-width: 300px;
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.trainer-img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.trainer-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.trainer-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #141024;
+}
+
+.trainer-info p {
+  color: #D52027;
+  margin-bottom: 20px;
+}
+
+.trainer-btn {
+  background: none;
+  border: 1px solid #D52027;
+  color: #D52027;
+  padding: 8px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.trainer-btn:hover {
+  background: #D52027;
+  color: white;
+}
+
+/* Кнопки навигации 
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  cursor: pointer;
+  z-index: 10;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-btn {
+  left: px;
+}
+
+.next-btn {
+  right: 20px;
+}
+
+/* Адаптивность 
+@media (max-width: 768px) {
+  .trainer-card {
+    min-width: 250px;
+  }
+  
+  .trainer-img {
+    height: 300px;
+  }
+}*/
