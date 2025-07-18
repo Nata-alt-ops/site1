@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карусель преподавателей</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f9f9f9;
+            padding: 50px 0;
+        }
+
+        .trainers-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 60px;
+            color: #141024;
+        }
+
+        .trainers-carousel {
+            position: relative;
+            overflow: hidden;
+            padding: 0 50px;
+        }
+
+        .trainers-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .trainer-card {
+            min-width: calc(33.333% - 20px);
+            margin: 0 10px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .trainer-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 3px solid #D52027;
+        }
+
+        .trainer-name {
+            font-size: 22px;
+            margin-bottom: 5px;
+            color: #141024;
+        }
+
+        .trainer-position {
+            color: #747272;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .trainer-more {
+            color: #D52027;
+            text-decoration: none;
+            position: relative;
+            display: inline-block;
+        }
+
+        .trainer-more::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #D52027;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .trainer-more:hover::after {
+            transform: scaleX(1);
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background: white;
+            border: none;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            z-index: 10;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+        }
+
+        .carousel-btn:hover {
+            background: #D52027;
+            color: white;
+        }
+
+        .prev-btn {
+            left: 0;
+        }
+
+        .next-btn {
+            right: 0;
+        }
+
+        @media (max-width: 768px) {
+            .trainer-card {
+                min-width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .trainer-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="trainers-section">
+        <h2 class="section-title">Профессиональные преподаватели</h2>
+        
+        <div class="trainers-carousel">
+            <button class="carousel-btn prev-btn">←</button>
+            <div class="trainers-track">
+                <div class="trainer-card">
+                    <img src="https://via.placeholder.com/120" alt="Ирина Лайм" class="trainer-img">
+                    <h3 class="trainer-name">Ирина Лайм</h3>
+                    <p class="trainer-position">преподаватель по робототехнике</p>
+                    <a href="#" class="trainer-more">Подробнее</a>
+                </div>
+                
+                <div class="trainer-card">
+                    <img src="https://via.placeholder.com/120" alt="Марина Орлова" class="trainer-img">
+                    <h3 class="trainer-name">Марина Орлова</h3>
+                    <p class="trainer-position">преподаватель по робототехнике</p>
+                    <a href="#" class="trainer-more">Подробнее</a>
+                </div>
+                
+                <div class="trainer-card">
+                    <img src="https://via.placeholder.com/120" alt="Максим Петров" class="trainer-img">
+                    <h3 class="trainer-name">Максим Петров</h3>
+                    <p class="trainer-position">преподаватель по программированию</p>
+                    <a href="#" class="trainer-more">Подробнее</a>
+                </div>
+                
+                <div class="trainer-card">
+                    <img src="https://via.placeholder.com/120" alt="Алексей Смирнов" class="trainer-img">
+                    <h3 class="trainer-name">Алексей Смирнов</h3>
+                    <p class="trainer-position">преподаватель по электронике</p>
+                    <a href="#" class="trainer-more">Подробнее</a>
+                </div>
+                
+                <div class="trainer-card">
+                    <img src="https://via.placeholder.com/120" alt="Ольга Ковалева" class="trainer-img">
+                    <h3 class="trainer-name">Ольга Ковалева</h3>
+                    <p class="trainer-position">преподаватель по 3D-моделированию</p>
+                    <a href="#" class="trainer-more">Подробнее</a>
+                </div>
+            </div>
+            <button class="carousel-btn next-btn">→</button>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const track = document.querySelector('.trainers-track');
+            const nextBtn = document.querySelector('.next-btn');
+            const prevBtn = document.querySelector('.prev-btn');
+            const cards = document.querySelectorAll('.trainer-card');
+            const cardCount = cards.length;
+            
+            // Ширина одной карточки (включая margin)
+            const cardStyle = window.getComputedStyle(cards[0]);
+            const cardWidth = cards[0].offsetWidth + 
+                             parseInt(cardStyle.marginLeft) + 
+                             parseInt(cardStyle.marginRight);
+            
+            // Позиция по умолчанию (показываем первые 3 карточки)
+            let currentPosition = 0;
+            const visibleCards = 3;
+            
+            // Функция для обновления позиции карусели
+            function updateCarousel() {
+                track.style.transform = `translateX(-${currentPosition * cardWidth}px)`;
+            }
+            
+            // Кнопка "вперед"
+            nextBtn.addEventListener('click', function() {
+                currentPosition = (currentPosition + 1) % cardCount;
+                updateCarousel();
+                
+                // Если дошли до конца, плавно переходим к началу
+                if (currentPosition > cardCount - visibleCards) {
+                    setTimeout(() => {
+                        track.style.transition = 'none';
+                        currentPosition = 0;
+                        updateCarousel();
+                        setTimeout(() => {
+                            track.style.transition = 'transform 0.5s ease';
+                        }, 50);
+                    }, 500);
+                }
+            });
+            
+            // Кнопка "назад"
+            prevBtn.addEventListener('click', function() {
+                if (currentPosition === 0) {
+                    // Плавный переход к концу
+                    track.style.transition = 'none';
+                    currentPosition = cardCount - visibleCards;
+                    updateCarousel();
+                    setTimeout(() => {
+                        track.style.transition = 'transform 0.5s ease';
+                        currentPosition = cardCount - visibleCards - 1;
+                        updateCarousel();
+                    }, 50);
+                } else {
+                    currentPosition = (currentPosition - 1 + cardCount) % cardCount;
+                    updateCarousel();
+                }
+            });
+            
+            // Адаптация под размер окна
+            window.addEventListener('resize', function() {
+                const newCardWidth = cards[0].offsetWidth + 
+                                   parseInt(cardStyle.marginLeft) + 
+                                   parseInt(cardStyle.marginRight);
+                if (Math.abs(newCardWidth - cardWidth) > 5) {
+                    location.reload(); // Перезагрузка для корректного пересчета размеров
+                }
+            });
+        });
+    </script>
+</body>
+</html>
