@@ -962,9 +962,21 @@ body {
     background-color: #D52027;
     width: 1920px;
     height: 460px;
+    position: relative ;
+
 
 }
 .sale_img{
     height: 365px;
     width: 1920px;
+    
+}
+.sale_h1_text{
+    left: 300px;
+    position: absolute ;
+
+}
+.sale_text{
+    left:300px;
+    position: absolute ;
 }
