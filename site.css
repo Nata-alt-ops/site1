@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+     
 }
 /*Шапка*/
 .countainer_1 {
@@ -12,11 +13,13 @@ body {
     opacity: 1;
     position: relative; 
     overflow: hidden; 
-    margin: 0; 
+    margin: 0px; 
     padding: 0px; 
     border: none; 
     outline: none;
     }
+  
+
 .Layout_big_text_left{
     width: 228px;
     height: 48px;
@@ -488,144 +491,480 @@ body {
   background: white;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+
 }
 
 .trainer-img {
   width: 100%;
   height: 360px;
   object-fit: cover;
-}* {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Arial', sans-serif;
-        }
+}* 
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
 
-        body {
-            background-color: #f9f9f9;
-            padding: 50px 0;
-        }
 
-        .trainers-section {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+.trainers-section {
+    max-width: 1264px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-        .section-title {
-            font-size: 50px;
-            text-align: center;
-            margin-bottom: 60px;
-            color: #141024;
-        }
+.section-title {
+    font-family: 'Jost';
+    font-weight: 600;
+    font-size: 50px;
+    line-height: 160%;
+    letter-spacing: 0;
+    position: absolute;
+    width: 851px;
+    height: 38px;
+    opacity: 1;
+    top: 2304px;
+    left: 380px;
+}
 
-        .trainers-carousel {
-            position: relative;
-            overflow: hidden;
-            padding: 0 50px;
-        }
+.trainers-carousel {
+    position: relative;
+    overflow: hidden;
+    padding: 171px 50px;
+}
 
-        .trainers-track {
-            display: flex;
-            transition: transform 0.5s ease;
-        }
+.trainers-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
 
-        .trainer-card {
-            min-width: calc(33.333% - 20px);
-            margin: 0 10px;
-            background: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            padding: 30px 20px;
-        }
+.trainer-card {
+    min-width: calc(33.333% - 20px);
+    margin: 0 10px;
+ 
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 30px 0px;
+}
 
-        .trainer-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-bottom: 20px;
-            border: 3px solid #D52027;
-        }
+.trainer-img {
+    width: 360px;
+    height: 500px;
+    object-fit: cover;
+    margin-bottom: 20px;
+    
+}
 
-        .trainer-name {
-            font-size: 22px;
-            margin-bottom: 5px;
-            color: #141024;
-        }
+.trainer-name {
+    font-size: 22px;
+    margin-bottom: 5px;
+    color: #141024;
+    text-align: left;
+    font-family: 'Jost';
+    font-size: 24px;
+    font-weight: 600;
+}
 
-        .trainer-position {
-            color: #747272;
-            margin-bottom: 20px;
-            font-size: 16px;
-        }
+.trainer-position {
+    color: #747272;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: left;
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 400;
+}
 
-        .trainer-more {
-            color: #D52027;
-            text-decoration: none;
-            position: relative;
-            display: inline-block;
-        }
+/* Обновленные стили для кнопки "Подробнее" */
+.trainer-more {
+    color: #D52027;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 4px 0; /* Добавляем отступы для линий */
+    font-family: 'Jost';
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.4s ease;
+    right: 132px; /* Убираем смещение вправо */
+    margin-top: 20px; /* Отступ сверху */
+}
 
-        .trainer-more::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: #D52027;
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-        }
+/* Линия сверху (как у навигационных кнопок) */
+.trainer-more::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: #D52027;
+    transition: width 0.4s ease;
+}
 
-        .trainer-more:hover::after {
-            transform: scaleX(1);
-        }
+/* Линия снизу (как у навигационных кнопок) */
+.trainer-more::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: #D52027;
+    transition: width 0.4s ease;
+}
 
-        .carousel-btn {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 50px;
-            height: 50px;
-            background: white;
-            border: none;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            cursor: pointer;
-            z-index: 10;
-            font-size: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s;
-        }
+/* Анимация при наведении */
+.trainer-more:hover {
+    color: #D52027;
+}
 
-        .carousel-btn:hover {
-            background: #D52027;
-            color: white;
-        }
+.trainer-more:hover::before {
+    width: 100%;
+}
 
-        .prev-btn {
-            left: 0;
-        }
+.trainer-more:hover::after {
+    width: 100%;
+}
 
-        .next-btn {
-            right: 0;
-        }
+.carousel-btn {
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+    width: 34px;
+    height: 34px;
+    background: rgb(255, 255, 255);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
 
-        @media (max-width: 768px) {
-            .trainer-card {
-                min-width: calc(50% - 20px);
-            }
-        }
+.carousel-btn:hover {
+    background: #9b9b9b;
+    color: white;
+}
 
-        @media (max-width: 480px) {
-            .trainer-card {
-                min-width: 100%;
-            }
-        }
+.prev-btn {
+    left: 1114px;
+}
+
+.next-btn {
+    right: 0;
+}
+
+@media (max-width: 768px) {
+    .trainer-card {
+        min-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .trainer-card {
+        min-width: 100%;
+    }
+}
+.countainer_5{
+    background-color: #141024;
+    color: #ffffff;
+    width: 1920px ;
+    height: 1080px;
+}
+
+/* Индикатор прогресса карусели */
+.carousel-progress {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 30px;
+    position: absolute;
+    bottom: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Анимированная линия прогресса */
+.progress-container {
+    position: absolute;
+    bottom: 100px;
+    left: 34%;
+    transform: translateX(-50%);
+    width: 393px;
+    height: 2px;
+    background-color: rgba(158, 158, 158, 0.2);
+    top:3120px;
+}
+
+.progress-line {
+    position: absolute;
+    height: 4px;
+    background-color: #000000;
+    transition: all 0.5s ease;
+    left: 0;
+    border-radius: 2px 2px;
+}
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+.modal-content {
+    background: white;
+    margin: 50px auto;
+    padding: 30px;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 10px;
+    position: relative;
+}
+
+
+.modal-body {
+    max-height: calc(70vh - 200px); /* Оставляем место для заголовка и табов */
+    overflow-y: auto;
+    padding-right: 10px; /* Чтобы текст не наезжал на полосу прокрутки */
+}
+
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.modal-header h2 {
+    color: #141024;
+    font-size: 28px;
+    margin: 0;
+    font-weight: 600;
+}
+
+.modal-header p {
+    color: #747272;
+    font-size: 18px;
+    margin: 5px 0 0;
+}
+
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    color: #141024;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.modal-tabs {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #666;
+    position: relative;
+}
+
+.tab-btn.active {
+    color: #D52027;
+    font-weight: 500;
+}
+
+.tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #D52027;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+}
+
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-content h3 {
+    color: #141024;
+    margin: 20px 0 10px;
+    font-size: 20px;
+}
+
+.tab-content p {
+    margin: 10px 0;
+    color: #333;
+}
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+.countainer_5 {
+    background-color: #ffffff;
+    color: #ffffff;
+    width: 1920px;
+    height: 800px;
+    position: relative; /* Добавьте это */
+    padding-top: 298px;
+    padding-top: 0px;
+} /* Добавьте отступ сверху */
+
+/* Стили для секции с пакетами */
+.packages-section {
+    padding: 80px 0;
+    background-color: #fff;
+}
+
+.packages-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 150px;
+}
+
+.package-card {
+    width: 300px;
+    padding: 40px 30px;
+    height: 383px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Равномерное распределение контента */
+}
+
+.package-card:hover {
+    background-color: #141024;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+
+}
+
+.package-name {
+    font-family: 'Jost', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 63px;
+    color: #141024;
+    transition: color 0.3s ease; 
+    font-family: 'jost';
+}
+
+.package-price {
+    font-family: 'Jost', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #141024;
+}
+
+.package-card:hover .package-price {
+    color: white;
+}
+.package-card:hover .package-name {
+    color: white; /* Белый цвет при наведении */
+}
+.package-card:hover .package-description {
+    color: white; /* Белый цвет при наведении */
+}
+.package-card:hover .package-card {
+    height: 900px;
+}
+
+
+.package-description {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    color: #141024;
+    transition: color 0.3s ease; 
+    font-family: 'jost';
+}
+
+.package-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #D52027;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    font-family: 'jost';
+}
+
+.package-card:hover .package-button {
+    background-color: #D52027;
+    color: #ffffff;
+    border-color: #D52027;
+}
+.choose_packet{
+    left:382px;
+    font-family: 'jost';
+    font-weight: 600;
+    font-size: 50px ;
+    position: absolute ;
+    color: #000000;
+
+}
+.countainer_6{
+    background-color: #D52027;
+    width: 1920px;
+    height: 460px;
+
+}
+.sale_img{
+    height: 365px;
+    width: 1920px;
+}
