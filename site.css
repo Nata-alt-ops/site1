@@ -958,25 +958,133 @@ body {
     color: #000000;
 
 }
-.countainer_6{
+.countainer_6 {
     background-color: #D52027;
-    width: 1920px;
+    width: 100%;
+    max-width: 1920px;
     height: 460px;
-    position: relative ;
-
-
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 300px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
-.sale_img{
-    height: 365px;
+
+.sale_img {
+    height: 719px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 1; /* Уменьшаем z-index */
+}
+
+.sale_text_block {
+    position: relative;
+    z-index: 3; /* Увеличиваем z-index текста */
+    width: 40%;
+    color: white;
+    left: 200px;
+}
+
+.sale_h1_text {
+    font-family: "Jost";
+    font-weight: 600;
+    font-size: 36px;
+    letter-spacing: 0%;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+
+.sale_text {
+    font-size: 20px;
+    margin-bottom: 30px;
+    font-family: "Jost";
+    font-weight: 400;
+}
+
+.sale_form {
+    position: relative;
+    z-index: 3; /* Увеличиваем z-index формы */
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.form_input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+}
+
+.form_button {
+    padding: 12px 0;
+    background: black;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.form_button:hover {
+    background: #ffffff;
+    color: #D52027;
+    transform: translateY(-2px); /* Добавляем небольшую анимацию */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень при наведении */
+}
+.countainer_7{
     width: 1920px;
-    
+    height: 159px;
+    background-color: #141024;
+    color: white;
+    position: relative;
 }
-.sale_h1_text{
-    left: 300px;
-    position: absolute ;
+.number{
+color:#ffffff;
+    position: absolute;
+    left: 1511px;
+    top: 39px;
+    font-size: 30px;
+    font-family: "Jost";
+    line-height: 160%;
+    letter-spacing: 0%;
+    font-weight: 700;
+    cursor: pointer;
+}
+.logo_small_text{
+    color:#9b9b9b;
+    left: 102px;
+    top: 85px;
+    position: absolute;
+    font-size: 16px;
+    font-family: "Jost";
+    line-height: 160%;
+    letter-spacing: 0%;
+    font-weight: 400;
 
 }
-.sale_text{
-    left:300px;
-    position: absolute ;
+.logo_big_text{
+    color:#ffffff;
+    position: absolute;
+    left: 102px;
+    top: 39px;
+    font-size: 30px;
+    font-family: "Jost";
+    line-height: 160%;
+    letter-spacing: 0%;
+    font-weight: 700;
+
+
+}
+.number:hover{
+    color:#D52027;
+
 }
