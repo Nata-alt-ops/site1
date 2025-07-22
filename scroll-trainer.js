@@ -89,20 +89,20 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
     
-    // Адаптация под размер окна
+   
     window.addEventListener('resize', function() {
         const newCardWidth = cards[0].offsetWidth + 
                            parseInt(cardStyle.marginLeft) + 
                            parseInt(cardStyle.marginRight);
         if (Math.abs(newCardWidth - cardWidth) > 5) {
-            location.reload(); // Перезагрузка для корректного пересчета размеров
+            location.reload(); 
         }
     });
     
-    // Инициализация прогресс-бара
+    
     updateProgress();
 
-    // Данные тренеров
+  
     const trainersData = {
         irina: {
             name: "Ирина Лайм",
@@ -243,7 +243,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse sequi ut consequu
 
     
 
-    // Открытие модального окна
+    
     document.querySelectorAll('.trainer-more').forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.preventDefault();
@@ -254,7 +254,7 @@ Lorem ipsum dolor sit, amet consectetur adipisicing elit. Esse sequi ut consequu
         });
     });
 
-    // Закрытие модального окна
+    
     document.addEventListener('click', function(e) {
         const modal = document.getElementById('trainer-modal');
         
@@ -316,28 +316,26 @@ function openModal(trainerId) {
         </div>
     `;
     
-    // Остальной код обработчиков событий...
-
-    // Показываем модальное окно
+    
     modal.style.display = 'block';
     document.body.style.overflow = 'hidden';
 
-    // Обработчики для вкладок
+    
     const tabs = modal.querySelectorAll('.tab-btn');
     tabs.forEach(tab => {
         tab.addEventListener('click', function() {
-            // Удаляем активный класс у всех
+           
             tabs.forEach(t => t.classList.remove('active'));
             document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
             
-            // Добавляем активный класс текущей вкладке и контенту
+            
             const tabId = this.getAttribute('data-tab');
             this.classList.add('active');
             document.getElementById(tabId).classList.add('active');
         });
     });
 
-    // Обработчик закрытия
+   
     modal.querySelector('.close').addEventListener('click', () => {
         modal.style.display = 'none';
         document.body.style.overflow = 'auto';
@@ -352,7 +350,7 @@ function openModal(trainerId) {
     }
 
     function switchTab(tabId, modal) {
-        // Снимаем активный класс со всех кнопок и контента
+       
         modal.querySelectorAll('.tab-btn').forEach(btn => {
             btn.classList.remove('active');
         });
@@ -360,7 +358,7 @@ function openModal(trainerId) {
             content.classList.remove('active');
         });
         
-        // Добавляем активный класс к выбранной кнопке и контенту
+        
         const activeBtn = modal.querySelector(`.tab-btn[data-tab="${tabId}"]`);
         const activeContent = modal.querySelector(`#${tabId}`);
         activeBtn.classList.add('active');

@@ -38,6 +38,7 @@ body {
     letter-spacing: 0;
     margin: 0;
 }
+/*Подключение шрифта*/
 @font-face {
     font-family: 'Jost';
     src: url('./Jost-master/fonts/Jost-VF.ttf') format('truetype');
@@ -359,7 +360,7 @@ body {
     display: flex;
     flex-direction: column;
     padding: 20px;
-    max-width: 300px; /* Ограничиваем максимальную ширину колонки */
+    max-width: 300px; 
     margin: 0px;
 }
 
@@ -382,7 +383,7 @@ body {
 }
 /* Стили для текста с иконкой */
 .about_pluses_text {
-    position: relative; /* Для позиционирования подсказки */
+    position: relative; 
     display: inline-flex;
     align-items: center;
 }
@@ -576,19 +577,19 @@ body {
     font-weight: 400;
 }
 
-/* Обновленные стили для кнопки "Подробнее" */
+
 .trainer-more {
     color: #D52027;
     text-decoration: none;
     position: relative;
     display: inline-block;
-    padding: 4px 0; /* Добавляем отступы для линий */
+    padding: 4px 0; 
     font-family: 'Jost';
     font-size: 18px;
     font-weight: 400;
     transition: all 0.4s ease;
-    right: 132px; /* Убираем смещение вправо */
-    margin-top: 20px; /* Отступ сверху */
+    right: 132px;
+    margin-top: 20px; 
 }
 
 /* Линия сверху (как у навигационных кнопок) */
@@ -615,7 +616,7 @@ body {
     transition: width 0.4s ease;
 }
 
-/* Анимация при наведении */
+
 .trainer-more:hover {
     color: #D52027;
 }
@@ -678,7 +679,7 @@ body {
     height: 1080px;
 }
 
-/* Индикатор прогресса карусели */
+
 .carousel-progress {
     display: flex;
     justify-content: center;
@@ -733,15 +734,15 @@ body {
     width: 80%;
     max-width: 940px;
     height: 768px;
-    border-radius: 20px;
+    border-radius: 20px !important;
     position: relative;
 }
 
 
 .modal-body {
-    max-height: calc(70vh - 200px); /* Оставляем место для заголовка и табов */
+    max-height: calc(70vh - 200px); 
     overflow-y: auto;
-    padding-right: 10px; /* Чтобы текст не наезжал на полосу прокрутки */
+    padding-right: 10px; 
 }
 .modal-image{
     width: 160px;
@@ -793,9 +794,9 @@ body {
 }
 
 .close {
-    position: absolute; /* Абсолютное позиционирование */
-    top: 30px; /* Отступ сверху */
-    right: 30px; /* Отступ справа */
+    position: absolute; 
+    top: 30px; 
+    right: 30px;
     font-size: 18px;
     font-family: 'Jost';
     color: #8a8a8a;
@@ -803,10 +804,10 @@ body {
     background: none;
     border: none;
     padding: 0;
-    transition: color 0.3s ease; /* Плавное изменение цвета */
+    transition: color 0.3s ease; 
 }
 .close:hover {
-    color: #D52027; /* Красный цвет при наведении */
+    color: #D52027; 
 }
 
 .modal-tabs {
@@ -893,12 +894,10 @@ body {
     color: #ffffff;
     width: 1920px;
     height: 800px;
-    position: relative; /* Добавьте это */
+    position: relative; 
     padding-top: 298px;
     padding-top: 0px;
-} /* Добавьте отступ сверху */
-
-/* Стили для секции с пакетами */
+}
 .packages-section {
     padding: 80px 0;
     background-color: #fff;
@@ -910,15 +909,15 @@ body {
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
-    padding-top: 150px;
+    padding-top: 49px;
 }
 
 .package-card {
-    width: 300px;
+    width: 360px;
     padding: 40px 30px;
-    height: 383px;
-    border: 1px solid #eee;
-    border-radius: 10px;
+    height: 460px;
+    border: 1px solid #cecccc;
+    border-radius: 20px !important;
     text-align: center;
     transition: all 0.3s ease;
     position: relative;
@@ -948,7 +947,7 @@ body {
 
 .package-price {
     font-family: 'Jost', sans-serif;
-    font-size: 32px;
+    font-size: 50px;
     font-weight: 700;
     margin-bottom: 20px;
     color: #141024;
@@ -958,13 +957,16 @@ body {
     color: white;
 }
 .package-card:hover .package-name {
-    color: white; /* Белый цвет при наведении */
+    color: white; 
 }
 .package-card:hover .package-description {
-    color: white; /* Белый цвет при наведении */
+    color: white; 
 }
 .package-card:hover .package-card {
     height: 900px;
+}
+.package-card:hover {
+     transform: scaleY(1.1);
 }
 
 
@@ -973,24 +975,28 @@ body {
     font-size: 16px;
     margin-bottom: 30px;
     line-height: 1.6;
-    color: #141024;
+    color: #6e6e6e;
     transition: color 0.3s ease; 
     font-family: 'jost';
 }
 
 .package-button {
     display: inline-block;
-    padding: 12px 30px;
+    padding: 24px 30px;
     background-color: #D52027;
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-family: 'Jost', sans-serif;
-    font-size: 16px;
+    font-size: 18px;
     transition: all 0.3s ease;
     border: 2px solid transparent;
     font-family: 'jost';
+    width: 298px;
+    height: 79px;
 }
+
+
 
 .package-card:hover .package-button {
     background-color: #D52027;
@@ -1025,15 +1031,15 @@ body {
     position: absolute;
     right: 0;
     bottom: 0;
-    z-index: 1; /* Уменьшаем z-index */
+    z-index: 1; 
 }
 
 .sale_text_block {
-    position: relative;
-    z-index: 3; /* Увеличиваем z-index текста */
-    width: 40%;
+    position: absolute;
+    z-index: 3;
+    width: 23%;
     color: white;
-    left: 200px;
+    left: 420px;
 }
 
 .sale_h1_text {
@@ -1042,7 +1048,11 @@ body {
     font-size: 36px;
     letter-spacing: 0%;
     line-height: 130%;
-    margin-bottom: 20px;
+    margin-bottom: 213px;
+    color: #ffffff;
+    position: absolute;
+    left: 419px;
+    width: 341px;
 }
 
 .sale_text {
@@ -1050,43 +1060,58 @@ body {
     margin-bottom: 30px;
     font-family: "Jost";
     font-weight: 400;
+    color: #ffffff;
+    position: absolute;
+    left:420px;
 }
 
 .sale_form {
-    position: relative;
-    z-index: 3; /* Увеличиваем z-index формы */
-    width: 500px;
+    position: absolute;
+    z-index: 3; 
+    width: 565px;
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 20px;
     border-radius: 8px;
+    left: 936px;
 }
+
+.form_input, 
+.form_button {
+    height: 64px !important; 
+    padding: 0 15px !important; 
+    margin: 0 !important;
+    border: none !important;
+    border-radius: 4px !important;
+    font-size: 1em !important;
+    box-sizing: border-box !important;
+    line-height: normal !important;
+    outline: none !important;
+}
+
 
 .form_input {
-    padding: 12px 15px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
+    width: 100% !important;
+    background: white !important;
 }
 
+
 .form_button {
-    padding: 12px 0;
-    background: black;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
+    background: #141024 ;
+    color: white ;
+    cursor: pointer ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+    transition: all 0.3s ease ;
 }
 
 .form_button:hover {
-    background: #ffffff;
-    color: #D52027;
-    transform: translateY(-2px); /* Добавляем небольшую анимацию */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень при наведении */
+    background: #ffffff ;
+    color: #D52027 ;
+    transform: translateY(-2px) ;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) ;
 }
 .countainer_7{
     width: 1920px;
