@@ -653,7 +653,7 @@ body {
 }
 
 .prev-btn {
-    left: 1114px;
+        left: 1144px;
 }
 
 .next-btn {
@@ -700,6 +700,8 @@ body {
     height: 2px;
     background-color: rgba(158, 158, 158, 0.2);
     top:3120px;
+    overflow: hidden;
+    border-radius: 2px;
 }
 
 .progress-line {
@@ -709,6 +711,7 @@ body {
     transition: all 0.5s ease;
     left: 0;
     border-radius: 2px 2px;
+    
 }
 /* Модальное окно */
 .modal {
@@ -728,8 +731,9 @@ body {
     margin: 50px auto;
     padding: 30px;
     width: 80%;
-    max-width: 700px;
-    border-radius: 10px;
+    max-width: 940px;
+    height: 768px;
+    border-radius: 20px;
     position: relative;
 }
 
@@ -739,7 +743,34 @@ body {
     overflow-y: auto;
     padding-right: 10px; /* Чтобы текст не наезжал на полосу прокрутки */
 }
+.modal-image{
+    width: 160px;
+    height: 222px;
+    border-radius: 20px;
+}
+.trainer-info{
+    left: 225px;
+    position: absolute;
+    top: 46px;
 
+}
+.name-text{
+    font-family: "Jost";
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 160%;
+    letter-spacing: 0%;
+}
+.positional-text{
+    font-family: "Jost";
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    letter-spacing: 0%;
+}
+.icons{
+    gap:10px;
+}
 
 .modal-header {
     display: flex;
@@ -762,19 +793,27 @@ body {
 }
 
 .close {
-    font-size: 28px;
-    font-weight: bold;
-    color: #141024;
+    position: absolute; /* Абсолютное позиционирование */
+    top: 30px; /* Отступ сверху */
+    right: 30px; /* Отступ справа */
+    font-size: 18px;
+    font-family: 'Jost';
+    color: #8a8a8a;
     cursor: pointer;
     background: none;
     border: none;
     padding: 0;
+    transition: color 0.3s ease; /* Плавное изменение цвета */
+}
+.close:hover {
+    color: #D52027; /* Красный цвет при наведении */
 }
 
 .modal-tabs {
     display: flex;
     border-bottom: 1px solid #eee;
     margin-bottom: 20px;
+    gap: 167px;
 }
 
 .tab-btn {
@@ -784,6 +823,15 @@ body {
     cursor: pointer;
     font-size: 16px;
     color: #666;
+    position: relative;
+}
+.tab-btn:hover {
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
     position: relative;
 }
 

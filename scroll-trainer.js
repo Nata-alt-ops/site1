@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Функция для обновления индикатора прогресса
     function updateProgress() {
-        const activeIndex = (currentPosition - 2) % cardCount;
-        const itemWidth = 100 / cardCount;
-        const newPosition = itemWidth * activeIndex;
-        
-        progressBar.style.width = itemWidth + '%';
-        progressBar.style.left = newPosition + '%';
-    }
+    const activeIndex = (currentPosition - 2) % cardCount;
+    const progressWidth = 100 / (cardCount / visibleCards); // 33.33% для 3 карточек
+    const newPosition = (activeIndex * progressWidth) % 100;
+    
+    progressBar.style.width = progressWidth + '%';
+    progressBar.style.left = newPosition + '%';
+}
     
     // Кнопка "вперед"
     nextBtn.addEventListener('click', function() {
@@ -273,21 +273,29 @@ function openModal(trainerId) {
         <div class="modal-content">
             <div class="modal-header">
                 <div class="trainer-header-content">
-                    <img src="${trainer.image}" alt="${trainer.name}" class="trainer-modal-image">
+                    <img src="${trainer.image}" alt="${trainer.name}" class="modal-image">
                     <div class="trainer-info">
-                        <h2>${trainer.name}</h2>
-                        <p class="position">${trainer.position}</p>
+                        <div class="name-text">
+                            <h2>${trainer.name}</h2>
+                        </div>
+                        <div class="positional-text">
+                            <p class="position">${trainer.position}</p>
+                        </div>
                         <div class="icons">
-                            <span class="icon">📌</span>
-                            <span class="icon">💬</span>
+                            <span class="icon">
+                            <img src="Facebook.svg" alt="">
+                            </span>
+                            <span class="icon">
+                             <img src="Instagram.svg" alt="">
+                            </span>
                         </div>
                     </div>
                 </div>
-                <button class="close">&times;</button>
+                <button class="close">Закрыть</button>
             </div>
             
             <div class="modal-tabs">
-                <button class="tab-btn active" data-tab="education">Образование</button>
+                <button class="tab-btn active" data-tab="education" >Образование</button>
                 <button class="tab-btn" data-tab="experience">Опыт работы</button>
                 <button class="tab-btn" data-tab="awards">Награды</button>
             </div>
